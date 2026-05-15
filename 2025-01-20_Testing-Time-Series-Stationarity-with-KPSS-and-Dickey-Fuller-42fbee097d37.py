@@ -7,6 +7,7 @@ import logging
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+np.random.seed(42)
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -17,7 +18,6 @@ logging.basicConfig(
 
 
 # Stationary time series (white noise)
-np.random.seed(42)
 stationary_series = np.random.normal(loc=0, scale=1, size=500)
 # Non-stationary time series (random walk)
 non_stationary_series = np.cumsum(np.random.normal(loc=0, scale=1, size=500))
