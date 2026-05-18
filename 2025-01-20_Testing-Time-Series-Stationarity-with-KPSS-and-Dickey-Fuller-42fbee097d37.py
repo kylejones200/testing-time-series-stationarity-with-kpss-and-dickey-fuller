@@ -1,6 +1,5 @@
 # Description: Short example for Testing Time Series Stationarity with KPSS and Dickey Fuller.
 
-
 import logging
 
 import matplotlib.pyplot as plt
@@ -16,15 +15,12 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 
-
 # Stationary time series (white noise)
 stationary_series = np.random.normal(loc=0, scale=1, size=500)
 # Non-stationary time series (random walk)
 non_stationary_series = np.cumsum(np.random.normal(loc=0, scale=1, size=500))
 # Create a DataFrame for convenience
-data = pd.DataFrame(
-    {"Stationary": stationary_series, "Non-Stationary": non_stationary_series}
-)
+data = pd.DataFrame({"Stationary": stationary_series, "Non-Stationary": non_stationary_series})
 
 plt.figure(figsize=(12, 6))
 plt.plot(data["Stationary"], label="Stationary Series")
@@ -59,12 +55,10 @@ def adf_test(series):
     logger.info(f"Conclusion: {'Stationary' if p_value < 0.05 else 'Non-Stationary'}\n")
 
 
-
 def main():
     logger.info("Testing the Stationary Series:\n")
     kpss_test(data["Stationary"])
     adf_test(data["Stationary"])
-
     logger.info("Testing the Non-Stationary Series:\n")
     kpss_test(data["Non-Stationary"])
     adf_test(data["Non-Stationary"])
