@@ -11,14 +11,7 @@ A stationary time series has a constant mean (The average value doesn't drift ov
 
 Stationarity matters because many time series models assume the input data is stationary (like ARIMA).
 
-## About
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
-
-## Files
-
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
 
 ## Disclaimer
 
